@@ -18,6 +18,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             QuestEaseTheme {
                 // A surface container using the 'background' color from the theme
+                // umble
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background

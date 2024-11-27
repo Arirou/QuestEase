@@ -10,5 +10,5 @@ import io.cucumber.junit.CucumberOptions;
         features = "app/src/androidTest/java/com/example/questease/TestIntegration/features",
         glue = "com.example.TestIntegration"
 )
-public class RunCucumberTest {
+public class IntegrationTestRunner {
 }

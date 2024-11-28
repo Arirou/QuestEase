@@ -1,10 +1,23 @@
 plugins {
     alias(libs.plugins.android.application)
+
 }
 
 android {
     namespace 'com.example.questease'
     compileSdk 34
+
+
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
+
+
+    packaging {
+        resources {
+            excludes += ['META-INF/LICENSE-notice.md']
+        }
+    }
 
     defaultConfig {
         applicationId "com.example.questease"
@@ -12,7 +25,11 @@ android {
         targetSdk 34
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "io.cucumber.android.runner.CucumberAndroidJUnitRunner"
+        testInstrumentationRunnerArguments(optionsAnnotationPackage: "app.java.com.example.questease.TestIntegration")
+        testInstrumentationRunner "java.com.example.questease.TestIntegration.IntegrationTestRunner"
     }
 
     buildTypes {
@@ -21,7 +38,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17

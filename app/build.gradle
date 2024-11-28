@@ -1,23 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
-
 }
 
 android {
     namespace 'com.example.questease'
     compileSdk 34
-
-
-    testOptions {
-        unitTests.includeAndroidResources = true
-    }
-
-
-    packaging {
-        resources {
-            excludes += ['META-INF/LICENSE-notice.md']
-        }
-    }
 
     defaultConfig {
         applicationId "com.example.questease"
@@ -25,68 +12,95 @@ android {
         targetSdk 34
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        testInstrumentationRunner "io.cucumber.android.runner.CucumberAndroidJUnitRunner"
-        testInstrumentationRunnerArguments(optionsAnnotationPackage: "app.java.com.example.questease.TestIntegration")
-        testInstrumentationRunner "java.com.example.questease.TestIntegration.IntegrationTestRunner"
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    testOptions {
+        unitTests.includeAndroidResources = true
     }
 
     packaging {
         resources {
-            excludes += ["META-INF/LICENSE.md"]
+            excludes += ["META-INF/LICENSE.md", "META-INF/LICENSE-notice.md"]
         }
     }
 }
 
 dependencies {
+    // AndroidX Libraries
+    implementation libs.appcompat
+    implementation libs.constraintlayout
+
+    // Material Design
+    implementation libs.material
+
+    // Networking
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+
+    // ML Kit
+    implementation 'com.google.mlkit:text-recognition:16.0.0'
+    implementation 'com.google.mlkit:digital-ink-recognition:18.1.0'
+
+    // WebSocket and Logging
+    implementation 'org.java-websocket:Java-WebSocket:1.5.2'
+    implementation 'org.slf4j:slf4j-android:1.7.36'
+
+
+    // Cucumber
+
+    // JUnit 5
+
+
+    // Robolectric
+    testImplementation "org.robolectric:robolectric:4.10.1"
+
+    // Mockito
+    testImplementation "org.mockito:mockito-core:5.5.0"
+
+    // Fragment
+    implementation "androidx.fragment:fragment:1.8.3"
+
+    // DataStore y Media3
     implementation libs.datastore.core.android
     implementation libs.filament.android
     implementation libs.media3.common
 
+    // Games and Vision
     implementation libs.games.activity
+    implementation libs.activity
     implementation libs.play.services.vision
     implementation libs.vision.common
-    androidTestImplementation libs.junit.jupiter
-    def fragment_version = "1.8.3"
+    
 
-    // Java language implementation
-    implementation "androidx.fragment:fragment:$fragment_version"
-    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
-    implementation 'com.google.android.material:material:1.9.0'
+    // JUnit 4 for local unit tests (non-Android tests)
+    testImplementation 'junit:junit:4.13.2'
+
+    // JUnit 4 for Android instrumented tests
+    androidTestImplementation 'junit:junit:4.13.2'
 
 
-    implementation libs.appcompat
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation libs.material
-    implementation libs.activity
-    implementation libs.constraintlayout
-
-    implementation 'org.java-websocket:Java-WebSocket:1.5.2'
-    implementation 'org.slf4j:slf4j-android:1.7.36'
-    // Testing dependencies
-    testImplementation libs.junit
-    androidTestImplementation libs.ext.junit
-    androidTestImplementation libs.espresso.core
-    implementation "com.squareup.retrofit2:retrofit:2.9.0"
-    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
-
-    implementation 'com.google.mlkit:text-recognition:16.0.0'
-    implementation 'com.google.mlkit:digital-ink-recognition:18.1.0'
+    testImplementation 'org.mockito:mockito-core:5.4.0'
+    androidTestImplementation 'org.mockito:mockito-android:5.4.0'
 
     // Cucumber dependencies
-    implementation 'io.cucumber:cucumber-android:7.18.1'
-    implementation 'io.cucumber:cucumber-java:7.20.1'
+    androidTestImplementation 'io.cucumber:cucumber-android:7.18.1'
+    androidTestImplementation 'io.cucumber:cucumber-java:7.20.1'
+
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
 }

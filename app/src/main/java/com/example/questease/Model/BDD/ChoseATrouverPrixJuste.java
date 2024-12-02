@@ -13,6 +13,13 @@ public class ChoseATrouverPrixJuste {
         this.valeur = valeur;
     }
 
+    public ChoseATrouverPrixJuste() {
+        this.id = 2000;
+        this.nom = "roberto";
+        this.cheminImage = "void";
+        this.valeur = 0;
+    }
+
     public int getId() {
         return id;
     }

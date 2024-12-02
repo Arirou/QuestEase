@@ -14,6 +14,13 @@ import retrofit2.Response;
 public class HandlerMotCryptexAPI {
     private Context context;
     MotCryptexAPI mcAPI = RetrofitInstance.getRetrofitInstance().create(MotCryptexAPI.class);
+    //private MotCryptexAPI mcAPI;
+    //pour faire les test, décommenté la ligne 17 et commenté la ligne 16
+
+    public HandlerMotCryptexAPI(Context context, MotCryptexAPI mcAPI) {
+        this.context = context;
+        this.mcAPI = mcAPI;
+    }
 
     public HandlerMotCryptexAPI(Context context) {
         this.context = context;

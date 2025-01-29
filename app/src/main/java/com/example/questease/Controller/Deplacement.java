@@ -133,7 +133,7 @@ public class Deplacement extends AppCompatActivity implements SensorEventListene
     private void chooseRandomLine() {
         // Choisit une ligne au hasard
         int line = random.nextInt(3);
-        
+
 
         switch (line) {
             case 0:

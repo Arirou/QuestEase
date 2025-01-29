@@ -101,7 +101,6 @@ public class RotatingPictures2 extends Theme {
                         finish();
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
                 }
             }
         }

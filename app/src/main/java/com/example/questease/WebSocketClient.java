@@ -30,7 +30,7 @@ public class WebSocketClient {
 
             @Override
             public void onFailure(WebSocket webSocket, Throwable t, Response response) {
-                t.printStackTrace();
+                System.out.println("WebSocket Failure: " + t.getMessage());
             }
 
             @Override

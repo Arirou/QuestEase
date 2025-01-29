@@ -89,7 +89,6 @@ public class WebSocketService extends Service {
                 jsonMessage.put("tag", "WebSocketError"); // Ajoutez le "tag" que vous souhaitez
                 jsonMessage.put("message", "WebSocket is not connected!");
             } catch (Exception e) {
-                e.printStackTrace();
             }
             String messageString = jsonMessage.toString();
 

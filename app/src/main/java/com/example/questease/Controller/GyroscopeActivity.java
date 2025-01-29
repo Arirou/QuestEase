@@ -117,7 +117,6 @@ public class GyroscopeActivity extends Theme implements SensorEventListener {
                     }
 
                 } catch (Exception e) {
-                    e.printStackTrace();
                 }
             }
         }

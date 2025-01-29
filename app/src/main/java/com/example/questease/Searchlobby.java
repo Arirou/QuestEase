@@ -129,7 +129,6 @@ public class Searchlobby extends Theme {
 
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
                 }
             }
         }
@@ -287,7 +286,6 @@ public class Searchlobby extends Theme {
                         webSocketService.sendMessage("setnom", name);
                         this.nom = name;
                     } catch (Exception e) {
-                        e.printStackTrace();
                     }
                 } else {
                     Toast.makeText(Searchlobby.this, "Veuillez entrer un nom valide.", Toast.LENGTH_SHORT).show();
@@ -305,7 +303,6 @@ public class Searchlobby extends Theme {
                         webSocketService.sendMessage("joinLobby", lobby);
                         this.nom = name;
                     } catch (Exception e) {
-                        e.printStackTrace();
                     }
                 } else {
                     Toast.makeText(Searchlobby.this, "Veuillez entrer un nom valide.", Toast.LENGTH_SHORT).show();

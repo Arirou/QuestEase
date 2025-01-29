@@ -87,7 +87,6 @@ public class StandBy extends Theme {
                         finish();
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
                 }
             }
         }

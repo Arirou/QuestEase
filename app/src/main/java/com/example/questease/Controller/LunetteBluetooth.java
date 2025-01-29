@@ -167,7 +167,6 @@ public class LunetteBluetooth extends AppCompatActivity {
                     statusText.setText("Connexion échouée.");
                     Toast.makeText(this, "Échec de connexion.", Toast.LENGTH_SHORT).show();
                 });
-                e.printStackTrace();
             }
         }).start();
     }
@@ -179,7 +178,6 @@ public class LunetteBluetooth extends AppCompatActivity {
             try {
                 bluetoothSocket.close();
             } catch (IOException e) {
-                e.printStackTrace();
             }
         }
     }

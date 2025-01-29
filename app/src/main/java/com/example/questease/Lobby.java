@@ -95,7 +95,6 @@ public class Lobby extends Theme {
                     }
 
                 } catch (Exception e) {
-                    e.printStackTrace();
                 }
             }
         }

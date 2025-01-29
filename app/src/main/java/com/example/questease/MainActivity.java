@@ -79,7 +79,6 @@ public class MainActivity extends Theme {
                         }
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
                 }
             }
         }

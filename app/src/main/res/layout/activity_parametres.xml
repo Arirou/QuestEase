@@ -274,7 +274,47 @@
                 android:checked="false" />
 
         </LinearLayout>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/difficultyButton1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="?attr/colorButtonBackground2"
+                app:cornerRadius="8dp"
+                app:strokeColor="?attr/bordercolor"
+                app:strokeWidth="3px" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/difficultyButton2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="?attr/colorButtonBackground2"
+                app:cornerRadius="8dp"
+                app:strokeColor="?attr/bordercolor"
+                app:strokeWidth="3px" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/difficultyButton3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="?attr/colorButtonBackground2"
+                app:cornerRadius="8dp"
+                app:strokeColor="?attr/bordercolor"
+                app:strokeWidth="3px" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/difficultyButton4"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="?attr/colorButtonBackground2"
+                app:cornerRadius="8dp"
+                app:strokeColor="?attr/bordercolor"
+                app:strokeWidth="3px" />
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

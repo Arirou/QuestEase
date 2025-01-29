@@ -115,7 +115,6 @@ public class GyroscopeActivity extends Theme implements SensorEventListener {
                         startActivity(intentgame);
                         finish();
                     }
-
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

@@ -132,7 +132,7 @@ public class GyroscopeActivity extends Theme implements SensorEventListener {
         solidLock = findViewById(R.id.solidLock);
         closeButton = findViewById(R.id.closeButton);
         rulesButton = findViewById(R.id.rulesButton);
-        SharedPreferences sharedPreferences = getSharedPreferences("QuestEasePrefs", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSecurePreferences(this);
         ApplyParameters(sharedPreferences);
         // Configuration du capteur de rotation vectorielle
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);

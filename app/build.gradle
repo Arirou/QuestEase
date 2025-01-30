@@ -57,7 +57,7 @@ dependencies {
 
     androidTestImplementation 'io.cucumber:cucumber-android:7.13.0'
     androidTestImplementation 'io.cucumber:cucumber-picocontainer:7.0.0'
-
+    implementation 'androidx.security:security-crypto:1.1.0-alpha06'
     testImplementation 'org.robolectric:robolectric:4.10.3'
 
     testImplementation 'junit:junit:4.12'

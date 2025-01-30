@@ -130,7 +130,7 @@ public class TrouveLeSon extends Theme {
         views.add(indice2);
         views.add(indice3);
         views.add(sendbutton);
-        sharedPreferences = getSharedPreferences("QuestEasePrefs", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSecurePreferences(this);
         ApplyParameters(sharedPreferences);
         if (sharedPreferences.getBoolean("tailleTexte", false)) {
             adjustTextSize(views);

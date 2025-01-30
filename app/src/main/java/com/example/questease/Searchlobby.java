@@ -144,7 +144,7 @@ public class Searchlobby extends Theme {
 
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        SharedPreferences sharedPreferences = getSharedPreferences("QuestEasePrefs", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSecurePreferences(this);
         ApplyParameters(sharedPreferences);
         setContentView(R.layout.activity_searchlobby);
 

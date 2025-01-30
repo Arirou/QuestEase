@@ -104,7 +104,7 @@ public class Lobby extends Theme {
     protected void onCreate(Bundle savedInstanceState) {
         Log.d("Lobby", "Nouvelle instance créée");
         super.onCreate(savedInstanceState);
-        sharedPreferences = getSharedPreferences("QuestEasePrefs", MODE_PRIVATE);
+        sharedPreferences = getSecurePreferences(this);
         ApplyParameters(sharedPreferences);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_lobby);

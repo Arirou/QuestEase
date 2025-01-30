@@ -94,7 +94,6 @@ public class TrouveLeSon extends Theme {
                         finish();
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
                 }
             }
         }

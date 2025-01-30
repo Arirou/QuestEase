@@ -31,6 +31,7 @@ public class Deplacement extends AppCompatActivity implements SensorEventListene
     private boolean isRunning = false;
     private String currentLine;
     private int lowerBound, upperBound;
+    private final Random random = new Random();
 
     private static final float STEP_LENGTH = 0.75f; // Longueur moyenne d'un pas en mètres
 
@@ -131,8 +132,8 @@ public class Deplacement extends AppCompatActivity implements SensorEventListene
 
     private void chooseRandomLine() {
         // Choisit une ligne au hasard
-        Random random = new Random();
-        int line = random.nextInt(3); // 0, 1, ou 2 pour les lignes spécifiées
+        int line = random.nextInt(3);
+
 
         switch (line) {
             case 0:

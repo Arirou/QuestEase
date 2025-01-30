@@ -104,7 +104,6 @@ public class PrixJuste extends Theme {
                         canPlay = true;
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
                 }
             }
         }

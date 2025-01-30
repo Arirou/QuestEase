@@ -98,7 +98,6 @@ public class TrouveLeSon2 extends Theme {
                         finish();
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
                 }
             }
         }
